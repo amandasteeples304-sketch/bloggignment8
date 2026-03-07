@@ -1,16 +1,15 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import pg from "pg";
+import { db } from "../utils/db";
 
 export default async function AddComment({ id }) {
   async function handleComment(formData) {
     "use server";
     console.log("Saving comment to the datebase");
-    const { username, comment } = Object.fromEntries(formData);
+    const { animal_id, username, comment } = Object.fromEntries(formData);
 
-    const db = new pg.Pool({ connectionString: process.env.DB_CONN });
     await db.query(
-      "insert into comments (animal_id, name, comment) values ($1, $2, $3)",
+      "INSERT INTO friendcomments (animal_id, name, comment) VALUES ($1, $2, $3)",
       [animal_id, username, comment],
     );
     revalidatePath(`/posts/${id}`);

@@ -1,6 +1,5 @@
-import pg from "pg";
+import db from "../db";
 export default async function Comments({ id }) {
-  const db = new pg.Pool({ connectionString: process.env.DB_CONN });
   const result = await db.query(
     "SELECT * FROM friendcomments WHERE animal_id = $1",
     [id],
