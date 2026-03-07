@@ -5,7 +5,7 @@ import AddComment from "@/components/AddComment";
 import Image from "next/image";
 import DeleteButton from "@/components/DeleteButton";
 
-export const dynamic = "force-dyanmic";
+export const dynamic = "force-dynamic";
 
 export default async function PostsPage({ params }) {
   const { postId } = await params;

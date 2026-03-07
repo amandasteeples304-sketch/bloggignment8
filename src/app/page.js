@@ -2,7 +2,7 @@ import { db } from "@/utils/db";
 import Link from "next/link";
 import Image from "next/image";
 
-export const dynamic = "force-dyanmic";
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const result = await db.query("SELECT * FROM animalcomments");
