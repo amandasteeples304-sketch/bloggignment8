@@ -1,4 +1,4 @@
-import db from "../db";
+import { db } from "@/utils/db";
 export default async function Comments({ id }) {
   const result = await db.query(
     "SELECT * FROM friendcomments WHERE animal_id = $1",
@@ -14,7 +14,7 @@ export default async function Comments({ id }) {
             <strong>{item.name}</strong>
           </p>
           <p>{item.comment}</p>
-          <p>{item.created_at}</p>
+          <p>{item.created_at.toLocaleString()}</p>
         </div>
       ))}
     </div>

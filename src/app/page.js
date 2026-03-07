@@ -8,7 +8,8 @@ export default async function HomePage() {
 
   return (
     <>
-      <h1>A blog about the animals I see on my travels</h1>
+      <h1> Hello, my name is Sophie,</h1>
+      <h1>This is a blog about the animals I see on my travels.</h1>
       <div>
         {animals.map((animal) => (
           <div key={animal.id}>
