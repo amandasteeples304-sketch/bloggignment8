@@ -5,6 +5,8 @@ import AddComment from "@/components/AddComment";
 import Image from "next/image";
 import DeleteButton from "@/components/DeleteButton";
 
+export const dynamic = "force-dyanmic";
+
 export default async function PostsPage({ params }) {
   const { postId } = await params;
   const result = await db.query("SELECT * FROM animalcomments WHERE id = $1", [
