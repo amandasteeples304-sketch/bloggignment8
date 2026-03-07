@@ -16,12 +16,14 @@ export default async function HomePage() {
             <h2>{animal.animal}</h2>
             <p> Posted by: {animal.name}</p>
             <p>{animal.comment}</p>
-            <Image
-              src={animal.image}
-              alt={animal.name}
-              width={200}
-              height={200}
-            />
+            <Link href={`/posts/${animal.id}`}>
+              <Image
+                src={animal.image}
+                alt={animal.name}
+                width={200}
+                height={200}
+              />
+            </Link>
             <Link href={`/posts/${animal.id}`}>View Details</Link>
           </div>
         ))}
