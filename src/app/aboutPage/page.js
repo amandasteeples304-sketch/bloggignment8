@@ -11,7 +11,8 @@ export default function AboutPage() {
       <p>
         Welcome to my animal blog! I created this to showcase the strange and
         wonderful animals that I meet while I travel. Feel free to leave any
-        thoughts and opinions on the images!
+        thoughts and opinions on the images! You can even submit your own animal
+        post!
       </p>
     </div>
   );

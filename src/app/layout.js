@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
         }}
       >
         <NavBar />
-        <main className="max-w-4xl mx-auto my-10 p-8 bg-white/80 backdrop-blur-sm shadow-xl border border-black/10 rounded-lg min-h-[80vh]">
+        <main
+          className="max-w-4xl mx-auto my-10 p-8 bg-white/50 shadow-2xl rounded-xl min-h-[80vh] border border-white/20 text-black"
+          style={{ textShadow: "0px 0px 4px rgba(255, 255, 255, 0.8)" }}
+        >
           {children}
         </main>
       </body>
