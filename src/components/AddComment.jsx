@@ -20,8 +20,10 @@ export default async function AddComment({ id }) {
       <form action={handleComment}>
         <input type="hidden" name="animal_id" value={id} />
         <label htmlFor="content" required />
-        <input name="username" required />
-        <textarea name="comment" required />
+        <label htmlFor="username">Your Name:</label>
+        <input id="username" name="username" required />
+        <label htmlFor="comment">Your Comment:</label>
+        <textarea id="comment" name="comment" required />
         <button type="submit">Submit</button>
       </form>
     </>

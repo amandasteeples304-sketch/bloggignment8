@@ -17,10 +17,19 @@ export default async function NewPostPage() {
     <>
       <h2>Create New Post</h2>
       <form action={handleSubmit}>
-        <input name="animal" placeholder="Animal Name" required />
-        <input name="name" placeholder="Your Name" required />
-        <textarea name="comment" placeholder="Your Comment" required />
-        <input name="image" placeholder="Image URL" required />
+        <label htmlFor="animal">Animal Name:</label>
+        <input id="animal" name="animal" placeholder="Animal Name" required />
+        <label htmlFor="name">Your Name:</label>
+        <input id="name" name="name" placeholder="Your Name" required />
+        <label htmlFor="comment">Your Comment:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          placeholder="Your Comment"
+          required
+        />
+        <label htmlFor="image">Image URL:</label>
+        <input id="image" name="image" placeholder="Image URL" required />
         <button type="submit">Submit</button>
       </form>
     </>
