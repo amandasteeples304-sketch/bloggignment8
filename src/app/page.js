@@ -27,6 +27,8 @@ export default async function HomePage() {
               />
             </Link>
             <Link href={`/posts/${animal.id}`}>View Details</Link>
+            <Link href={`/posts/${animal.id}`}>Add Comment</Link>
+            <Link href="/newPost">Add a new animal sighting</Link>
           </div>
         ))}
       </div>
