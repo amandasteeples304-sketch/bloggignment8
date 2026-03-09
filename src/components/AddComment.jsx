@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { db } from "../utils/db";
 

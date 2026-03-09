@@ -1,6 +1,5 @@
 import { db } from "@/utils/db";
 import Link from "next/link";
-import Image from "next/image";
 import Carousel from "@/components/Carousel";
 
 export const dynamic = "force-dynamic";
