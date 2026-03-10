@@ -17,11 +17,11 @@ export default async function Comments({ id, handleDelete }) {
     <div className="space-y-10">
       <section>
         <h3 className="font-bold text-xl mb-4 italic text-black/80">
-          Sophie's thoughts:
+          Sophie&apos;s thoughts:
         </h3>
         <div className="p-6 bg-white/40 rounded-lg border-l-4 border-black shadow-md">
           <p className="text-xl leading-relaxed font-medium">
-            "{mainPost?.comment}"
+            {mainPost?.comment}
           </p>
           <p className="text-xs mt-3 opacity-60 uppercase tracking-widest">
             Posted by Sophie on {mainPost?.created_at?.toLocaleDateString()}
