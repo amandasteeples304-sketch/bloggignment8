@@ -18,8 +18,8 @@ export default function Carousel({ animals }) {
             href={`/posts/${animal.id}`}
             className="snap-center shrink-0 transition-transform hover:scale-105 duration-300"
           >
-            <div className="w-[75vw] sm:w-[280px] md:w-[320px] bg-white/10 rounded-3xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
-              <div className="relative h-[250px] md:h-[300px] w-full">
+            <div className="w-[75vw] sm:w-70px md:w-[320px] bg-white/10 rounded-3xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
+              <div className="relative h-62.5px md:h-75 w-full">
                 <Image
                   src={animal.image}
                   alt={animal.animal}
