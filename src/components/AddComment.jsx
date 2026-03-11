@@ -1,5 +1,5 @@
 import { revalidatePath } from "next/cache";
-import { db } from "../utils/db";
+import { db } from "@/utils/db";
 
 export default async function AddComment({ id }) {
   async function handleComment(formData) {
