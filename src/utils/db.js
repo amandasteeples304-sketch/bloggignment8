@@ -1,11 +1,10 @@
 import pg from "pg";
+import { parse } from "pg-onnection-string";
 let db;
 if (!db) {
-  db = new pg.Pool({
-    connectionString: process.env.DB_CONN,
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  });
+  const config = parse(process.env.DB_CONN);
+  config.ssl = {
+    rejectUnauthorized: false,
+  };
+  db = new pg.Pool(config);
 }
-export { db };
