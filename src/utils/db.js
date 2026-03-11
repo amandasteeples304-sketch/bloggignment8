@@ -1,5 +1,5 @@
 import pg from "pg";
-import { parse } from "pg-onnection-string";
+import { parse } from "pg-connection-string";
 let db;
 if (!db) {
   const config = parse(process.env.DB_CONN);
