@@ -1,8 +1,11 @@
 import pg from "pg";
 import { parse } from "pg-connection-string";
-const connectionConfig = parse(process.env.DB_CONN);
+const connectionString = process.env.DB_CONN;
+if (!connectionString) {
+  throw new Error("DB_CONN environment variable is missing!");
+}
+const connectionConfig = parse(connectionString);
 connectionConfig.ssl = {
-  rejectUnauthorised: false,
+  rejectUnauthorized: false,
 };
-const db = new pg.Pool(connectionConfig);
-export { db };
+export const db = new pg.Pool(connectionConfig);
